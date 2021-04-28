@@ -88,7 +88,7 @@ for dataset in dataset_list:
                 decoded = Dense(ncol, activation='relu', activity_regularizer=regularizers.l1(10e-1))(decoded)
                 autoencoder = Model(inputs=input_dim, outputs=decoded)
                 autoencoder.compile(optimizer=optim, loss='mean_squared_error', metrics=['accuracy'])
-                historyf.append( autoencoder.fit(X_train, X_train, epochs=100, batch_size=16, shuffle=True, verbose=0, validation_data=(X_test, X_test)))
+                historyf.append( autoencoder.fit(X_train, X_train, epochs=250, batch_size=16, shuffle=True, verbose=0, validation_data=(X_test, X_test)))
 #                 print('FITTED with ' + optim)
 
                 encoder = Model(inputs=input_dim, outputs=encoded)
