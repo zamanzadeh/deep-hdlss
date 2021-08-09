@@ -28,7 +28,6 @@ from keras.layers import Input, Dense
 from keras.models import Model
 from keras import regularizers
 
-from sklearn.cluster import KMeans
 from sklearn.preprocessing import LabelEncoder
 from sklearn.preprocessing import OneHotEncoder
 from sklearn.preprocessing import StandardScaler
